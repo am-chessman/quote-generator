@@ -1,61 +1,265 @@
+:root {
+    --author-and-links-text-color: #0000ff;
+    --dark-gray-color: #333333;
+    --charcoal-color: #36454f;
+    --deep-green-color: #006400;
+    --deep-blue-color: #001020;
+    --burgrundy-color: #800000;
+    --default-font: "Merienda", cursive;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
 
 body {
     padding: 0;
     margin: 0;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Merienda", cursive;
+    font-family: var(--default-font);
     background: linear-gradient(to left, rgb(210, 206, 247), rgb(202, 154, 154));
+}
+
+.nav-bar {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    column-gap: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: var(--default-font);
+    color: #00000c;
+}
+
+.nav-bar > #link {
+    display: grid;
+    width: 80px;
+    font-family: var(--default-font);
+}
+
+.nav-bar > #link > a {
+    width: 100%;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-decoration: none;
+    color: #00000c;
+    font-family: inherit;
+    transition: all 1s;
+}
+
+.nav-bar > #link > a::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    display: grid;
+    align-items: self-end;
+    width: 0px;
+    height: 4px;
+    background: #0000ff;
+    transition: all 1s ease-in-out;
+}
+
+.nav-bar > #link:nth-child(1)> a::after {
+    margin-left: 15px;
+}
+
+.nav-bar > #link:nth-child(2)> a::after {
+    margin-left: 10px;
+}
+
+.nav-bar > #link:nth-child(4)> a::after {
+    margin-left: 20px;
+}
+
+.nav-bar > .toggle-btn > #light-mode {
+    font-family: var(--default-font);
+}
+
+.nav-bar > #link > a:hover {
+    background: linear-gradient(to left, rgb(223, 24, 24), rgb(9, 79, 243));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.nav-bar > #link:nth-child(1) > a:hover::after {
+    width: 50px;
+}
+
+.nav-bar > #link:nth-child(2) > a:hover::after {
+    width: 60px;
+}
+
+.nav-bar > #link:nth-child(3)> a:hover::after {
+    width: 80px;
+}
+.nav-bar > #link:nth-child(4) > a:hover::after {
+    width: 40px;
+}
+
+.bg-color > .nav-bar > #link a {
+    color: #fff;
+}
+
+.quote-holder {
+    background: none;
+    background-color: #000;
+    color: #fff;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bg-color {
+    height: 100vh;
+    background: #000;
+}
+
+.bg-color > .nav-bar > .toggle-btn > #light-mode {
+    background: none;
+    font-weight: bold;
+    color: #fff;
+    font-family: var(--default-font);
+}
+
+.bg-color > .body-content > .quote-holder {
+    background: none;
+    background-color: var(--deep-blue-color);
+}
+
+.bg-color > .body-content > .quote-holder > .author-and-btn > .author {
+    color: var(--author-and-links-text-color);
+}
+
+.bg-color > .body-content > .quote-holder > .author-and-btn button {
+    background: none;
+    background-color: #cbcbcb;
+    color: #000;
+}
+
+.toggle-btn {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 30px;
+    justify-content: center;
+    place-items: center;
+    margin: auto;
+    font-family: inherit;
+    color: #00000c;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fefefe;
+    -webkit-transition: .4s;
+    transition: .4s;;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 0px;
+    top: 0px;
+    background-color: #949494;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background: linear-gradient(128.87deg, #9780e5 14.05%, #e666cc 89.3%)    
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px linear-gradient(128.87deg, #9780e5 14.05%, #e666cc 89.3%);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(25.6px);
+    -ms-transform: translateX(25.6px);
+    transform: translateX(25.6px);
+    background-color: #000;
+    border: none;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+    border: solid 1px #000000;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 .quote-holder {
     display: grid;
     justify-content: center;
-    place-items: center;
-    grid-auto-flow: row;
+    grid-template-rows: 320px 100px;
     width: 500px;
+    background-color: none;
+    background: transparent;
     background-color: rgb(211, 194, 194);
     text-align: center;
     font-family: inherit;
-    box-shadow: rgb(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 0px 20px;
     border-radius: 70px;
 }
 
-#quote,
-#author {
-    display: grid;
-    justify-content: center;
-    width: inherit;
+.q-mark {
     margin: 0;
-    padding: 0;
 }
 
 .q-mark::before {
     content: '❝';
     font-size: 100px;
     width: 50px;
-    height: 130px;
+    height: 60px;
     display: block;
     position: relative;
-    right: 0px;
-    top: 25px;
+    right: 0;
+    top: 0;
+    margin-bottom: 40px;
 }
 
 .quote {
     display: block;
     font-size: 30px;
-    height: 300px;
+    /* height: 170px; */
+    width: inherit;
+    word-wrap: break-word;
+    text-align: center;
 }
 
 .author {
     font-size: 20px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     font-weight: bold;
-    color: rgb(0, 0, 128);
+    color: var(--author-and-links-text-color);
+    margin: 5px 0px 5px 0px;
+    text-align: center;
 }
 
 button {
@@ -68,11 +272,19 @@ button {
     color: rgb(240, 248, 255);
     background-color: rgb(0, 0, 0);
     cursor: pointer;
-    margin: 5% 0px 5% 60%;
+    margin: 2% 0 0 60%;
     outline: none;
     border-width: initial;
     border-style: none;
     border-color: initial;
     border-image: initial;
     border-radius: 10px;
+}
+
+/*Media queries*/
+@media screen and (max-width: 500px) {
+    .nav-bar {
+        display: block;
+        width: 100%;
+    }
 }
