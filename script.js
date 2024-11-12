@@ -395,8 +395,13 @@ const quotesList = [
 let quoteElement = '';
 let authorElement = '';
 
-quoteElement = document.querySelector('.quote').innerHTML
+quoteElement = document.querySelector('.quote')
 authorElement = document.querySelector('.author')
+
+let quoteChoice = quotesList[Math.floor(Math.random() * quotesList.length)]
+quoteElement.innerHTML = quoteChoice.quote
+authorElement.innerHTML = quoteChoice.author
+
 
 function randomQuote() {
     let quoteChoice = quotesList[Math.floor(Math.random() * quotesList.length)]
@@ -412,7 +417,6 @@ function randomQuote() {
 const quoteSelector = document.querySelector('.quote')
 
 quoteSelector.classList.add('q-mark')
-
 
 // Dark mode
 const toggleBtn = document.querySelector('.toggleBtn');
