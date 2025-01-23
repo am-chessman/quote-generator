@@ -11,13 +11,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
-
 body {
     padding: 0;
     margin: 0;
     height: 100vh;
     font-family: var(--default-font);
-    background: linear-gradient(to left, rgb(210, 206, 247), rgb(202, 154, 154));
+    background: linear-gradient(to left, #d2cef7, #ca9a9a);
 }
 
 .nav-bar {

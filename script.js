@@ -396,6 +396,7 @@ let quoteElement = '';
 let authorElement = '';
 
 quoteElement = document.querySelector('.quote')
+
 authorElement = document.querySelector('.author')
 
 let quoteChoice = quotesList[Math.floor(Math.random() * quotesList.length)]
