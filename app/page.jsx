@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef, use } from "react";
 import quotesList from "./qoutesArray";
+import "./globals.css";
 
 export default function Home() {
 
