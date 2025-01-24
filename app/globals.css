@@ -13,18 +13,19 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
+  overflow: hidden;
   font-family: var(--default-font);
   background: linear-gradient(to left, #d2cef7, #ca9a9a);
 }
 
 .bodyContainer {
-  height: inherit;
+  height: 100%;
   transition: all .5s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
-  gap: calc(3rem + 1vw);
+  justify-content: space-start;
+  gap: calc(5rem + 1vw);
 }
 
 .body-content {
