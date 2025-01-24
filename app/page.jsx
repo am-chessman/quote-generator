@@ -127,7 +127,7 @@ export default function Home() {
           </div>      
       </div>
       
-      <div style={styles.bodyContainer} className="body-content">
+      <div className="body-content">
           <div style={styles["quote-holder"]} className="quote-holder">
               <p className="quote" style={styles["quote-holder > p"]} ref={quoteRef}></p>
               <div className="author-and-btn">
