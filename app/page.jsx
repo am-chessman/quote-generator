@@ -119,11 +119,11 @@ export default function Home() {
               <a style={styles["link > a"]} href="#">help</a>
           </div>
           <div className="toggle-btn">
+              <span style={styles["link > a"]} className="light-mode">DARK MODE</span>
               <label className="toggle">
                   <input className="toggleBtn" ref={toggleBtn} type="checkbox"/>
                   <span className="slider round"></span>
               </label>
-              <span style={styles["link > a"]} id="light-mode">DARK MODE</span>
           </div>      
       </div>
       

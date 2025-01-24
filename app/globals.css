@@ -13,7 +13,6 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
-  /* overflow: hidden; */
   font-family: var(--default-font);
   background: linear-gradient(to left, #d2cef7, #ca9a9a);
 }
@@ -21,10 +20,14 @@ body {
 .bodyContainer {
   height: inherit;
   transition: all .5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: calc(3rem + 1vw);
 }
 
 .body-content {
-  transform: translateY(15%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,14 +36,16 @@ body {
 }
 
 .navBar {
-  display: grid;
-  grid-auto-flow: column;
+  width: 40%;
+  display: flex;
   justify-content: center;
-  column-gap: 150px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 20px 20px 10px 20px;
   font-family: var(--default-font);
   color: #00000c;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .navBar > .link {
@@ -83,10 +88,6 @@ body {
   margin-left: 20px;
 }
 
-.navBar > .toggle-btn > #light-mode {
-  font-family: var(--default-font);
-}
-
 .navBar > .link > a:hover {
   background: linear-gradient(to left, rgb(223, 24, 24), rgb(9, 79, 243));
   background-clip: text;
@@ -112,12 +113,15 @@ body {
 .toggle-btn {
   display: grid;
   grid-auto-flow: column;
-  column-gap: 30px;
+  column-gap: 10px;
   justify-content: center;
   place-items: center;
-  margin: auto;
   font-family: inherit;
   color: #00000c;
+}
+
+.light-mode {
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .toggle {
