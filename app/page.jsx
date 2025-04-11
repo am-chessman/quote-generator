@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef, use } from "react";
+import { useState, useEffect, useRef } from "react";
 import quotesList from "./qoutesArray";
 import "./globals.css";
 
@@ -9,9 +9,7 @@ export default function Home() {
   const authorRef = useRef(null)
   const toggleBtn = useRef(null)
   const nextQuoteBtn = useRef(null)
-  
-  
-  const [quoteElement, setQuote] = useState(quotesList[0]);
+
   const [darkMode, setDarkMode] = useState(false);
   
   useEffect(() => {
@@ -27,9 +25,7 @@ export default function Home() {
     const updateQuote = () => {
       const randomIndex = Math.floor(Math.random() * quotesList.length);
       const newQuote = quotesList[randomIndex];
-      
-      setQuote(newQuote);
-      
+
       if (quoteRef.current && authorRef.current) {
         quoteRef.current.innerHTML = newQuote.quote;
         authorRef.current.innerHTML = newQuote.author;
@@ -106,18 +102,18 @@ export default function Home() {
   return (
     <main style={styles.bodyContainer} className="bodyContainer">
       <div style={styles.navBar} className="navBar">
-          <div className="link">
-              <a style={styles["link > a"]} href="#">home</a>
-          </div>
-          <div className="link">
-              <a style={styles["link > a"]} href="#">about</a>
-          </div>
-          <div className="link">
-              <a style={styles["link > a"]} href="#">contact</a>
-          </div>
-          <div className="link">
-              <a style={styles["link > a"]} href="#">help</a>
-          </div>
+          {/*<div className="link">*/}
+          {/*    <a style={styles["link > a"]} href="#">home</a>*/}
+          {/*</div>*/}
+          {/*<div className="link">*/}
+          {/*    <a style={styles["link > a"]} href="#">about</a>*/}
+          {/*</div>*/}
+          {/*<div className="link">*/}
+          {/*    <a style={styles["link > a"]} href="#">contact</a>*/}
+          {/*</div>*/}
+          {/*<div className="link">*/}
+          {/*    <a style={styles["link > a"]} href="#">help</a>*/}
+          {/*</div>*/}
           <div className="toggle-btn">
               <span style={styles["link > a"]} className="light-mode">DARK MODE</span>
               <label className="toggle">
