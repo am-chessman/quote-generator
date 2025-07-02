@@ -69,32 +69,29 @@ export default function Home() {
   
   const styles = {
     bodyContainer: {
-      background: darkMode ? "#000" : "linear-gradient(to left, #d2cef7, #ca9a9a)",
+      background: darkMode ? "#5b2333" : "#fcf7f8",
       transition: "all 0.3s ease",
+      // text: darkMode ? "#fcf7f8" : "#a36121",
     },
 
     navBar: {
-      color: darkMode ? "#fff" : "#000",
-    },
-
-    "link > a": {
-      color: darkMode ? "#d2cef7" : "#000",
+      color: darkMode ? "#fcf7f8" : "#5b2333",
     },
 
     "quote-holder": {
-      background: darkMode ? "none" : "#fff",
-      backgroundColor: darkMode ? "#001020" : "#d2cef7",
+      background: darkMode ? "#5b2333" : "#fcf7f8",
+      // backgroundColor: darkMode ? "#001020" : "#fcf7f8",
       boxShadow: darkMode ? "rgba(0, 0, 0, 0.5) 0px 7px 29px 0px" : "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
       transition: "all 0.3s ease",
     },
 
     "quote-holder > p": {
-      color: darkMode ? "#FFEB99" : "#333",
+      color: darkMode ? "#f7f4f3" : "#5b2333",
     },
 
     "nextButton": {
-      backgroundColor: darkMode ? "#80D8FF" : "#000",
-      color: darkMode ? "#000" : "#fff",
+      backgroundColor: darkMode ? "#fcf7f8" : "#5b2333",
+      color: darkMode ? "#5b2333" : "#fcf7f8",
     }
 
   }

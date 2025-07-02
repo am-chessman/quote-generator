@@ -1,12 +1,15 @@
 :root {
   --author-and-links-text-color: #0000ff;
   --dark-gray-color: #333333;
-  --charcoal-color: #36454f;
   --deep-green-color: #006400;
   --deep-blue-color: #001020;
   --burgrundy-color: #800000;
   --default-font: "Merienda", cursive;
   --lavender-color: #d2cef7;
+  --charcoal-color: #233d4d;
+  --pumpkin-color: #fe7f2d;
+  --white-smoke-color: #f7f4f3;
+  --wine-color: #5b2333;  
 }
 
 body {
@@ -15,7 +18,7 @@ body {
   height: 100vh;
   overflow: hidden;
   font-family: var(--default-font);
-  background: linear-gradient(to left, #d2cef7, #ca9a9a);
+  /* background: linear-gradient(to left, #d2cef7, #ca9a9a); */
 }
 
 .bodyContainer {
@@ -157,13 +160,13 @@ body {
   width: 18px;
   left: 0px;
   top: 0px;
-  background-color: #949494;
+  background-color: var(--wine-color);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background: linear-gradient(128.87deg, #9780e5 14.05%, #e666cc 89.3%)    
+  background-color: var(--white-smoke-color);
 }
 
 input:focus + .slider {
